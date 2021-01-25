@@ -1,0 +1,82 @@
+.testimonial__carousel.owl-carousel .owl-nav button.owl-prev {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    margin-left: -20px;
+    transform: translate(-100%, 100%);
+    width: 52px;
+    height: 52px;
+    background-image: url("../img/carousel/arrow-left.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+
+    // Планшет
+    @media (min-width: 768px) {
+        top: 12px;
+        left: -129px;
+        bottom: auto;
+        margin-left: 0;
+        transform: unset;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        top: 12px;
+        left: -40px;
+        transform: translateX(-100%);
+    }
+
+    &:hover, &:focus {
+        opacity: 0.7;
+        outline: none;
+        border: 1px solid #5a5a5a;
+    }
+
+    span {
+        display: none;
+    }
+}
+
+.testimonial__carousel.owl-carousel .owl-nav button.owl-next {
+    position: absolute;
+    bottom: -18px;
+    left: 50%;
+    margin-left: 20px;
+    transform: translateY(100%);
+    width: 52px;
+    height: 52px;
+    background-image: url("../img/carousel/arrow-right.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+
+    // Планшет
+    @media (min-width: 768px) {
+        top: 12px;
+        right: -129px;
+        left: auto;
+        bottom: auto;
+        margin-left: 0;
+        transform: unset;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        top: 12px;
+        right: -40px;
+        transform: translateX(100%);
+    }
+
+    &:hover, &:focus {
+        opacity: 0.7;
+        outline: none;
+        border: 1px solid #5a5a5a;
+    }
+
+    span {
+        display: none;
+    }
+}

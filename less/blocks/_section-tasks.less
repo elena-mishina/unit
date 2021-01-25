@@ -1,0 +1,111 @@
+.section-tasks {
+    position: relative;
+    padding-top: 73px;
+    padding-bottom: 45px;
+    overflow: hidden;
+
+    // Планшет
+    @media (min-width: 768px) {
+        padding-top: 63px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        padding-top: 92px;
+        padding-bottom: 27px;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        content: "";
+        width: 68px;
+        height: 68px;
+        background-color: #a4eecb;
+
+        // Планшет
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        // Десктоп
+        @media (min-width: 1200px) {
+            display: block;
+            content: "";
+            top: 50%;
+            left: 0;
+            transform: translate(-50%, -50%) rotate(45deg);
+            width: 125px;
+            height: 125px;
+        }
+    }
+
+    &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: #e1e1e1;
+    }
+}
+
+.section-tasks__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // Планшет
+    @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-left: 30px;
+        padding-right: 25px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        align-items: center;
+        padding-left: 100px;
+        padding-right: 150px;
+    }
+}
+
+.section-tasks .app-info {
+    width: 100%;
+    max-width: 480px;
+
+    // Планшет
+    @media (min-width: 768px) {
+        width: 380px;
+        max-width: unset;
+        order: 2;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        width: 440px;
+        order: 1;
+    }
+}
+
+.section-tasks__img {
+    width: 202px;
+
+    // Планшет
+    @media (min-width: 768px) {
+        order: 1;
+        width: 270px;
+        max-width: unset;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        order: 2;
+        width: auto;
+    }
+}

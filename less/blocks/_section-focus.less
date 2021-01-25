@@ -1,0 +1,117 @@
+.section-focus {
+    position: relative;
+    padding-top: 72px;
+    padding-bottom: 30px;
+    overflow: hidden;
+
+    // Планшет
+    @media (min-width: 768px) {
+        padding-top: 62px;
+        padding-bottom: 0;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        padding-top: 80px;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        content: "";
+        width: 68px;
+        height: 68px;
+        background-color: #a4eecb;
+
+
+        // Планшет
+        @media (min-width: 768px) {
+            display: none;
+        }
+
+        // Десктоп
+        @media (min-width: 1200px) {
+            display: block;
+            content: "";
+            top: 50%;
+            right: 0;
+            left: auto;
+            transform: translate(50%, -50%) rotate(45deg);
+            width: 125px;
+            height: 125px;
+        }
+    }
+}
+
+.section-focus__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    // Планшет
+    @media (min-width: 768px) {
+        flex-direction: row;
+        align-items: flex-start;
+        padding-right: 21px;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        align-items: center;
+        padding-right: 0;
+    }
+}
+
+.section-focus__img {
+    position: relative;
+    max-width: 470px;
+
+    // Планшет
+    @media (min-width: 768px) {
+        height: 502px;
+        width: 287px;
+        max-width: unset;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        height: 731px;
+        width: 470px;
+    }
+
+    img {
+        position: static;
+        max-width: 100%;
+        transform: translateX(-5%);
+
+        // Планшет
+        @media (min-width: 768px) {
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: unset;
+            transform: translateX(0%);
+        }
+    }
+}
+
+.section-focus .app-info {
+    width: 100%;
+    max-width: 480px;
+
+    // Планшет
+    @media (min-width: 768px) {
+        width: 384px;
+        margin-left: auto;
+        max-width: unset;
+    }
+
+    // Десктоп
+    @media (min-width: 1200px) {
+        width: 470px;
+        padding-bottom: 120px;
+    }
+}
